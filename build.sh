@@ -4,7 +4,7 @@ set -o errexit
 
 # Modify this line as needed for your package manager (pip, poetry, etc.)
 pip install poetry -U
-poetry isntall --no-root --no-dev
+poetry install --no-root --no-dev
 
 # Convert static asset file
 python manage.py collectstatic --no-input
