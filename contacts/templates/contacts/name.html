@@ -1,0 +1,6 @@
+<!– aqui seguimos o mesmo exemplo do "mysite, usamos o argumento url,  o app_name "contacts" e a função getname do template name.html" –>
+<form action="{% url "contacts:get_name" %}" method="post" novalidate> 
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Submit">
+</form>

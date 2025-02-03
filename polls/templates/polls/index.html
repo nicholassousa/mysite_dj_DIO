@@ -1,0 +1,11 @@
+<!– se latest_question_list possui algo, então : –>
+{% if latest_question_list %} 
+    <ul> 
+    {% for question in latest_question_list %}
+        <li><a href="{% url 'polls:detail' question.id %}">{{ question.question_text }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+<!– se não possuir, então : –>
+    <p>Nenhuma equente foi criada.</p>
+{% endif %}
